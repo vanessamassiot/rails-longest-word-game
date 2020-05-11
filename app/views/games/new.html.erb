@@ -1,3 +1,11 @@
 <h1> a game page with random letters and Fom to type a word</h1>
 
 <%= @letters %>
+
+<p>what is the longest word you can find? </p>
+
+<form action="/score" method="get">
+  <input type="text" name="answer" value="<%= params[:answer] %>" placeholder="your turn to play!">
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <input type="submit" value="play">
+</form>
