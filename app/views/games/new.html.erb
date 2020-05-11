@@ -7,5 +7,6 @@
 <form action="/score" method="get">
   <input type="text" name="answer" value="<%= params[:answer] %>" placeholder="your turn to play!">
   <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <%= hidden_field_tag :random, @letters %>
   <input type="submit" value="play">
 </form>
