@@ -1,5 +1,15 @@
 <h1> a page to display the score</h1>
 
-<%= params[:answer]%>
+<p><%= params[:answer]%></p>
 
-<%= params[:value] %>
+<p><%= params[:random].split(//) %></p>
+
+<p><%= params[:answer].upcase.split(//)%></p>
+
+<% if params[:random].split(//).include?(params[:answer].upcase.split(//)) %>
+     <p><%= "great"  %></p>
+<% elsif  %>
+     <p><%= "not great" %></p>
+<% else %>
+     <p><%= "not great" %></p>
+<% end %>
